@@ -13,7 +13,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)    
+    @task = Task.new(task_params)
+
     if @task.save
       redirect_to tasks_path, notice: "Task was successfully created."
     else
@@ -33,6 +34,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
+    
     redirect_to tasks_url, notice: "Task was successfully destroyed."
   end
 
