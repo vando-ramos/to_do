@@ -12,7 +12,7 @@
 
   <body>
     <div class='d-flex h-100 align-items-center justify-content-center row bg'>
-      <main class='col-11 col-md-10 col-lg-8 shadow-lg p-5 mb-5 bg-gradient rounded'>
+      <main class='col-11 col-md-10 col-lg-8 p-5 mb-5 bg-transparent rounded'>
         <% flash.each do |type, message| %>
           <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissible fade show" role="alert">
             <%= message %>
